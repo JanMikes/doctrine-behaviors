@@ -1,0 +1,20 @@
+{
+	"name": "lexinek/doctrine-behaviors",
+	"require": {
+		"kdyby/doctrine": "^2.3",
+		"nette/di": "^2.3",
+		"nette/utils": "^2.3"
+	},
+	"authors": [
+		{
+			"name": "Jan Mikes",
+			"email": "j.mikes@me.com",
+			"homepage": "http://janmikes.cz"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Lexinek\\DoctrineBehaviors\\": "src"
+		}
+	},
+}
