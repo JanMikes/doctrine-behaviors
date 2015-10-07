@@ -3,7 +3,8 @@
 	"require": {
 		"kdyby/doctrine": "^2.3",
 		"nette/di": "^2.3",
-		"nette/utils": "^2.3"
+		"nette/utils": "^2.3",
+		"php": ">=5.4.0"
 	},
 	"authors": [
 		{
@@ -12,6 +13,7 @@
 			"homepage": "http://janmikes.cz"
 		}
 	],
+	"minimum-stability": "dev",
 	"autoload": {
 		"psr-4": {
 			"Lexinek\\DoctrineBehaviors\\": "src"
