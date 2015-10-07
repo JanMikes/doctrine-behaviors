@@ -18,5 +18,8 @@
 		"psr-4": {
 			"Lexinek\\DoctrineBehaviors\\": "src"
 		}
+	},
+	"autoload-dev": {
+		"classmap": ["src/"]
 	}
 }
