@@ -1,0 +1,2 @@
+services:
+	- Lexinek\DoctrineBehaviors\Model\Orderable\Organiser
