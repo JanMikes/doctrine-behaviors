@@ -4,10 +4,11 @@ namespace Lexinek\DoctrineBehaviors\DI;
 
 use Kdyby;
 use Kdyby\Events\DI\EventsExtension;
-use Knp\DoctrineBehaviors\Model\Orderable\Orderable;
-use Knp\DoctrineBehaviors\ORM\Orderable\OrderableSubscriber;
+use Lexinek\DoctrineBehaviors\Model\Orderable\Orderable;
+use Lexinek\DoctrineBehaviors\ORM\Orderable\OrderableSubscriber;
 use Nette\Utils\AssertionException;
 use Nette\Utils\Validators;
+use Zenify\DoctrineBehaviors\DI\BehaviorExtension;
 
 /**
  *  @author Jan Mikes <j.mikes@me.com>
