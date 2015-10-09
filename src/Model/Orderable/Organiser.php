@@ -1,6 +1,6 @@
 <?php
 
-namespace Lexinek\Doctrine\Behaviors\Model\Orderable;
+namespace Lexinek\DoctrineBehaviors\Model\Orderable;
 
 use Nette;
 use Kdyby\Doctrine\EntityManager;
