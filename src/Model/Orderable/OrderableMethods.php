@@ -2,6 +2,8 @@
 
 namespace Lexinek\DoctrineBehaviors\Model\Orderable;
 
+use Doctrine\ORM\Event\LifecycleEventArgs;
+
 /**
  *  @author Jan Mikes <j.mikes@me.com>
  *  @copyright Jan Mikes - janmikes.cz
