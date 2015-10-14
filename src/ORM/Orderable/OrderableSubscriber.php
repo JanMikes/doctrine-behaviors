@@ -43,7 +43,6 @@ final class OrderableSubscriber extends AbstractSubscriber
 		if ($this->isOrderable($classMetadata)) {
 			if ($classMetadata->reflClass->hasMethod("updatePosition")) {
 				$classMetadata->addLifecycleCallback("updatePosition", Events::postPersist);
-				$classMetadata->addLifecycleCallback("updatePosition", Events::postUpdate);
 			}
 
 			if (!$classMetadata->hasField("position")) {

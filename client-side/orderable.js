@@ -16,8 +16,8 @@ $(function(){
 		helper: fixHelperModified,
 		placeholder: "ui-state-highlight",
 		update: function( event, ui ) {
-			var positions = $(this).sortable("toArray", {attribute: "data-reorder-id"});
-			var reorderActionUrl = $(this).data("reorder-action");
+			var positions = $(this).sortable("toArray", {attribute: "data-orderable-id"});
+			var reorderActionUrl = $(this).parent().data("orderable-handle");
 
 			$.nette.ajax({
 				url: reorderActionUrl,

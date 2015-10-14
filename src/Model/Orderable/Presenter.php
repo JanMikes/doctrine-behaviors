@@ -18,10 +18,10 @@ trait Presenter
 	}
 
 
-	private function updateOrderablePositions($entityClass, array $positions)
+	private function updateOrderablePositions($entityClass)
 	{
 		if ($this->isAjax() && $this->request->isMethod("POST")) {
-			$this->organiser->update($entityClass, $positions);
+			$this->orderableOrganiser->update($entityClass, $this->request->getPost("positions"));
 		}
 
 		$this->terminate();
