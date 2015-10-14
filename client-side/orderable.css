@@ -1,0 +1,14 @@
+table.orderable .orderable-column {
+	width: 30px;
+	border-right: 1px solid #eee;
+	text-align: center;
+}
+
+table.orderable tbody tr {
+	background: #fff;
+	cursor: move;
+}
+
+table.orderable tbody tr.ui-state-highlight {
+	background: #ffefca;
+}

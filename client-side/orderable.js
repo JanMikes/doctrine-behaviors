@@ -9,7 +9,10 @@ var fixHelperModified = function(e, tr) {
 };
 
 $(function(){
-	$("tbody.sortable-records").sortable({
+	$("table.orderable thead tr").prepend("<th></th>");
+	$("table.orderable tbody tr").prepend("<td class='orderable-column'><i class='fa fa-arrows-v'></i></td>");
+
+	$("table.orderable tbody").sortable({
 		helper: fixHelperModified,
 		placeholder: "ui-state-highlight",
 		update: function( event, ui ) {
