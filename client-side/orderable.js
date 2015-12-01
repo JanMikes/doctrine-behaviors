@@ -45,6 +45,7 @@ var orderableTable = (function()
 				$.nette.ajax({
 					url: reorderActionUrl,
 					type: "POST",
+					off: ["orderableTable"],
 					data: {
 						"positions": positions
 					}
