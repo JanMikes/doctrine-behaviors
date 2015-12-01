@@ -28,14 +28,17 @@ var orderableTable = (function()
 	function init(selector) {
 		$(selector).each(function(){
 			if ($(this).find("tbody > tr").length > 1) {
-				$("table.orderable thead tr").prepend("<th></th>");
-				$("table.orderable tbody tr").prepend("<td class='orderable-column'><i class='fa fa-arrows-v'></i></td>");
+				if ($(this).data("orderableInitialized") != "true") {
+					$("table.orderable thead tr").prepend("<th></th>");
+					$("table.orderable tbody tr").prepend("<td class='orderable-column'><i class='fa fa-arrows-v'></i></td>");
+					$(this).data("orderableInitialized", "true");
+				}
 			} else {
 				$(this).removeClass("orderable");
 			}
 		});
 
-		$(selector + " tbody").sortable({
+		$(selector + ":not([data-orderableInitialized=true]) tbody").sortable({
 			helper: fixHelperModified,
 			placeholder: "ui-state-highlight",
 			update: function( event, ui ) {
