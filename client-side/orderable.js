@@ -9,8 +9,14 @@ var fixHelperModified = function(e, tr) {
 };
 
 $(function(){
-	$("table.orderable thead tr").prepend("<th></th>");
-	$("table.orderable tbody tr").prepend("<td class='orderable-column'><i class='fa fa-arrows-v'></i></td>");
+	$("table.orderable").each(function(){
+		if ($(this).find("tbody > tr").length > 1) {
+			$("table.orderable thead tr").prepend("<th></th>");
+			$("table.orderable tbody tr").prepend("<td class='orderable-column'><i class='fa fa-arrows-v'></i></td>");
+		} else {
+			$(this).removeClass("orderable");
+		}
+	});
 
 	$("table.orderable tbody").sortable({
 		helper: fixHelperModified,
