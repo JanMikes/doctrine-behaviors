@@ -8,13 +8,13 @@ use Lexinek\DoctrineBehaviors\Model\Orderable\Orderable;
 use Lexinek\DoctrineBehaviors\ORM\Orderable\OrderableSubscriber;
 use Nette\Utils\AssertionException;
 use Nette\Utils\Validators;
-use Zenify\DoctrineBehaviors\DI\BehaviorExtension;
+use Zenify\DoctrineBehaviors\DI\AbstractBehaviorExtension;
 
 /**
  *  @author Jan Mikes <j.mikes@me.com>
  *  @copyright Jan Mikes - janmikes.cz
  */
-final class OrderableExtension extends BehaviorExtension
+final class OrderableExtension extends AbstractBehaviorExtension
 {
 	/** @var [] */
 	protected $default = [
