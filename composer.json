@@ -1,7 +1,6 @@
 {
 	"name": "lexinek/doctrine-behaviors",
 	"require": {
-		"kdyby/doctrine": "^2.3",
 		"nette/di": "^2.3",
 		"nette/utils": "^2.3",
 		"php": ">=5.4.0"
