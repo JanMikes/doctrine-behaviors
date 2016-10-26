@@ -3,6 +3,7 @@
 namespace Lexinek\DoctrineBehaviors\Model\Orderable;
 
 use Doctrine\ORM\Event\LifecycleEventArgs;
+use Kdyby\Doctrine\EntityManager;
 
 /**
  *  @author Jan Mikes <j.mikes@me.com>
@@ -13,9 +14,10 @@ trait OrderableMethods
 	public function updatePosition(LifecycleEventArgs $args)
 	{
 		$entity = $args->getEntity();
-		$entity->setPosition($entity->id * 10);
-		
 		$em = $args->getEntityManager();
+
+		$entity->setPosition($this->getLastPosition($em) + 10);
+
 		$em->persist($entity);
 		$em->flush();
 	}
@@ -33,4 +35,15 @@ trait OrderableMethods
 		return $this;
 	}
 
+
+	private function getLastPosition(EntityManager $em)
+	{
+		$last = $em->getRepository(get_class($this))->findOneBy([], ["position" => "DESC"]);
+
+		if ($last) {
+			return $last->getPosition();
+		}
+
+		return 0;
+	}
 }
