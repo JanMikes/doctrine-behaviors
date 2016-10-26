@@ -26,7 +26,7 @@ final class Organiser extends Nette\Object
 		$position = 1;
 		foreach ($items as $id) {
 			$entity = $this->em->find($entityClass, $id);
-			$entity->position = $position * 10;
+			$entity->setPosition($position * 10);
 			$this->em->persist($entity);
 			$position++;
 		}
