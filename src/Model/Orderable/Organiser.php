@@ -2,14 +2,13 @@
 
 namespace Lexinek\DoctrineBehaviors\Model\Orderable;
 
-use Nette;
 use Kdyby\Doctrine\EntityManager;
 
 /**
  *  @author Jan Mikes <j.mikes@me.com>
  *  @copyright Jan Mikes - janmikes.cz
  */
-final class Organiser extends Nette\Object
+final class Organiser
 {
 	/** @var Kdyby\Doctrine\EntityManager */
 	private $em;
